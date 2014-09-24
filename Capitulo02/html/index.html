@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Este es el título del documento</title>
+		<link rel="stylesheet" href="..\css\MisEstilos.css">
+		<!-- 2. Estilo EMBEBIDO 
+		<style type="text/css">
+			p{font-size: 30px;}
+		</style>
+		-->
+	</head>
+	<body>
+		<p>Parrafo normal. También se ve referenciado con la regla de pseudo clase nth-child(1). ODD.</p>
+		<p id="texto1">Referencia con ID. También se ve referenciado con la regla de pseudo clase nth-child(2). EVEN.</p>
+		<p class="texto1">Referencia con CLASS. También se ve referenciado con la regla de pseudo clase nth-child(3). ODD.</p>
+		<p name="texto1">Referencia con [ATRIBUTO]. También se ve referenciado con la regla de pseudo clase nth-child(4). EVEN.</p>
+		<!-- 1. Estilo en LÍNEA
+		<p style="font-size: 20px">Mi texto</p>
+		-->
+		<div id="wrapper">
+			<p class="mitexto1">Referencia con pseudo clases hijo 1 nth-child(1). ODD.</p>
+			<p class="mitexto2">Referencia con pseudo clases hijo 2 nth-child(2). EVEN.</p>
+			<p class="mitexto3">Referencia con pseudo clases hijo 3 nth-child(3). ODD.</p>
+			<p class="mitexto4">Referencia con pseudo clases hijo 4 nth-child(4). EVEN.</p>
+		</div>
+
+		<p>Existen otras pseudoclases como:</p>
+		<ul>
+			<li>:first-child</li>
+			<li>:only-child</li>
+			<li>:not (cualquier tipo referencia) (para declarar excepciones)</li>
+			<li>:last-child</li>
+		</ul>
+	</body>
+</html>

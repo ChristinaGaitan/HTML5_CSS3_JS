@@ -1,0 +1,119 @@
+/*Regla universal*/
+*{
+	margin: 0px;
+}
+
+/*======================================
+	Referencia por ID
+======================================*/
+#texto1{font-size: 20px;}
+
+/*======================================
+	Referencia por CLASS
+======================================*/
+p.texto1{font-size: 30px;}
+
+/*======================================
+	Referencia por ATRIBUTO
+======================================*/
+
+p[name="texto1"]{font-size: 40px;}
+/*Ahora se incluyen selectores de expreciones regulares*/
+/*INICIA con tex*/
+p[name^="tex"]{font-size: 40px;}
+/*TERMINA con to1*/
+p[name$="to1"]{font-size: 40px;}
+/*INCLUYE exto*/
+p[name*="ext"]{font-size: 40px;}
+
+
+/*======================================
+	Referencia por PSEUDO CLASS
+======================================*/
+
+p:nth-child(1){
+	background: #E52B50;
+}
+
+p:nth-child(2){
+	background: #FFBF00;
+}
+
+p:nth-child(3){
+	background: #9966CC;
+}
+
+p:nth-child(4){
+	background: #A4C639;
+}
+
+/*Afecta a índices impar*/
+p:nth-child(odd){
+	background: #9966CC;
+}
+/*Afecta a índices par*/
+p:nth-child(even){
+	background: #A4C639;
+}
+
+li:last-child
+{
+	background: #7CB9E8;
+}
+
+li:first-child
+{
+	background: #E52B50;
+}
+
+/*======================================
+	NUEVOS SELECTORES
+======================================*/
+/*Referencía a los elementos de la derecha
+que sean HIJOS del elemento de la izquierda
+
+PADRE: div
+HIJO: p
+
+En ese caso se afecta a todos los párrafos que sean hijos de
+un div. Pueda hacerse referencia directa utilizando una clase:
+p.mitexto2
+*/
+div > p
+{
+	color: blue;
+}
+
+/*Referencía a los elementos de la derecha
+que sean HERMANOS INMEDIATOS del elemento de la izquierda.
+Deben compartir el mismo padre.
+Sólo referencía a un elemento.
+
+HERMANO "MAYOR": p.mitexto2
+HERMANO "MENOR" (sólo uno): p
+
+En ese caso se afecta a todos los párrafos que sean el hermano
+siguiente de un párrafo con clase mitexto2. 
+Deben ser hermanos consecutivos, es decir, el párrafo que se encuentre
+inmediatamente después de un p.mitexto2
+*/
+p.mitexto2 + p
+{
+	color: green;
+}
+
+/*Referencía a los elementos de la derecha
+que sean HERMANOS SIGUIENTES del elemento de la izquierda.
+Deben compartir el mismo padre.
+Puede referenciar a más de un elemento.
+
+HERMANO "MAYOR": p.mitexto2
+HERMANOS "MENORES": p
+
+En ese caso se afecta a TODOS los párrafos que sean hermanos, después
+de un párrafo con clase mitexto2. 
+*/
+p.mitexto2 ~ p
+{
+	font-weight: bold;
+}
