@@ -1,0 +1,139 @@
+/*Regla universal*/
+/*Todos los elementos tendrán un margen interno y externo = 0*/
+*{
+	/*Margen externo*/
+	margin: 0px;
+	/*Margen interno*/
+	padding: 0px;
+}
+
+/*Estilo de los títulos*/
+h1{
+	font: bold 20px verdana, sans-serif;
+}
+
+/*Estilo de los subtítulos*/
+h2{
+	font: bold 14px verdana, sans-serif;
+}
+
+/*Hacemos esto para que los navegadores que todavía NO soportan HTML5
+traten nuestros nuevos elementos como si fueran elementos de bloque,
+es decir, que los consideren como divs
+*/
+header, section, footer, aside, nav, article, figure, figcaption, hgroup{
+	display:block;
+}
+
+/*Centramos el cuerpo*/
+body{
+	text-align: center;
+}
+
+/*Estilo para la caja principal (un div)*/
+#agrupar{
+	width: 960px;
+	margin: 15px auto;
+	/*Regresamos la alinación a su valor por defecto*/
+	text-align: left;
+}
+
+#cabecera{
+	background: #FFFBB9;
+	border: 1px solid #999999;
+	padding: 20px;
+}
+
+#menu{
+	background: #CCCCCC;
+	padding: 5px 15px;
+}
+#menu li{
+	/*display: inline-block;
+		Para mostrar los elementos de la lista como cajas en línea.
+	 	No generan ningún salto de línea.
+	 	Su ancho es el ancho de su contenido
+	*/
+	display: inline-block;
+	list-style: none;
+	padding: 5px;
+	font: bold 14px verdana, sans-serif;
+}
+
+#seccion{
+	/*El contenido de este elemento se colocará a la izquierda
+	 	con un tamaño de 660px + 40px de margen = 700px*/
+	float: left;
+	width: 660px;
+	margin: 20px;
+}
+
+#columna{
+	/*El contenido de este elemento se colocará a la izquierda
+		(en el espacio disponible)
+	 	con un tamaño de 220px + 40px de padding = 260px*/
+	float: left;
+	width: 220px;
+	margin: 20px 0px;
+	padding: 20px;
+	background: #CCCCCC;
+}
+
+#pie{
+	border-top: 2px solid #999999;
+	padding: 20px;
+	text-align: center;
+	/*Restaura las condiciones normales del área ocupada por 
+	el elemento, NO permitiéndole posicionarse adyacente a una
+	caja flotante.
+	Significa que el elemento ya NO es flotante como los anteriores.
+	Para un elemento block siginifica que será posicionado debajo 
+	del último elemento en una nueva línea*/
+	clear: both;
+}
+
+article {
+	background: #FFFBCC;
+	border: 1px solid #999999;
+	padding: 20px;
+	margin-bottom: 15px;
+}
+article footer{
+	text-align: right;
+}
+
+time{
+	color: #999999;
+}
+
+figcaption{
+	font: italic 14px verdana, sans-serif;
+}
+
+/*NOTA: El tamaño real que ocupará un elemento se calcula sumando:
+tamaño + márgenes internos + bordes + márgenes */
+
+/*NOTA: En CSS3 se incluye el Box-Sizing
+Esta propiedad nos permite especificar cómo desamos
+calcular el tamaño real que ocupará un elemento.
+box-sizing: content-box; -> Cálculo normal = tamaño + márgenes internos + bordes + márgenes 
+
+box-sizing: border-box; -> Nuevo cálculo = tamaño + márgenes
+En este caso el valor del tamaño incluirá dentro de él
+los valores de márgenes internos + bordes */
+
+
+/* PREFIJOS PARA NAVEGADORES
+Los prefijos para los navegadores más comunes son:
+· -moz- para Firefox.
+· -webkit- para Safari y Chrome.
+· -o- para Opera.
+· -khtml- para Konqueror.
+· -ms- para Internet Explorer.
+· -chrome- específico para Google Chrome.
+
+EJEMPLOS:
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+*/
