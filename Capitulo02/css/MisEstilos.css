@@ -106,6 +106,7 @@ p.mitexto2 + p
 que sean HERMANOS SIGUIENTES del elemento de la izquierda.
 Deben compartir el mismo padre.
 Puede referenciar a más de un elemento.
+NO importa si hay otros elementos intercalados.
 
 HERMANO "MAYOR": p.mitexto2
 HERMANOS "MENORES": p
