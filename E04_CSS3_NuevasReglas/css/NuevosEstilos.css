@@ -1,0 +1,335 @@
+body{
+	text-align: center;
+}
+
+#principal{
+	display: block;
+	width: 500px;
+	margin: 50px auto;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid #999999;
+	background: #DDDDDD;
+
+
+
+	/*===============================
+		BORDER-RADIUS
+		- Esquinas redondeadas
+	=================================*/
+	/*El mismo valor para todas las esquinas
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	*/
+
+	/*Esquina sup-izq, sup-der, inf-der, inf-izq 
+	-moz-border-radius: 10px 20px 30px 40px;
+	-webkit-border-radius: 10px 20px 30px 40px;
+	border-radius: 10px 20px 30px 40px;
+	*/
+
+	/*Elipse: radio horizontal/ radio vertical; 
+	-moz-border-radius: 20px / 10px;
+	-webkit-border-radius: 20px / 10px;
+	border-radius: 20px / 10px;
+	*/
+
+	/*===============================
+		BOX-SHADOW
+		- Sombras a elementos box
+	=================================*/
+	/*Necesita 3 valores básicos:
+		1. Color: rgb() o hexadecimales
+		2. Valor en px: distancia HORIZONTAL entre la sombra y el elemento.
+		3. Valor en px: distancia VERTICAL entre la sombra y el elemento.
+	Notas:
+		- VALORES POSITIVOS: la sombra se aplica a la derecha y abajo. 
+		- VALORES NEGATIVOS: la sompra se aplica a la izquierda y arriba.
+		- VALORES CERO O NULOS: La sombra se posiciona detras del eleento, 
+								esto nos permite hacer difuminados
+	
+	-moz-box-shadow: rgb(150, 150, 150) 5px 5px;
+	-webkit-box-shadow: rgb(150, 150, 150) 5px 5px;
+	box-shadow: rgb(150, 150, 150) 5px 5px;
+	*/
+
+	/*Difuminación (opcional):
+		4. Valor en px: difuminación 
+	-moz-box-shadow: rgb(150, 150, 150) 5px 5px 10px;
+	-webkit-box-shadow: rgb(150, 150, 150) 5px 5px 10px;
+	box-shadow: rgb(150, 150, 150) 5px 5px 10px;
+	*/
+
+	/*Sombra interna (opcional):
+		5. Valor insent: convierte la sombra en una sombre interna para dar profundidad 
+	-moz-box-shadow: rgb(150, 150, 150) 5px 5px 10px inset;
+	-webkit-box-shadow: rgb(150, 150, 150) 5px 5px 10px inset;
+	box-shadow: rgb(150, 150, 150) 5px 5px 10px inset;
+	*/
+
+	/*===============================
+		GRADIENTE LINEAL
+	=================================*/
+	/*	- Son configurados como fondos
+		- Pueden usarse también con background-image
+		1. Posición de inicio: px, %, o usando top, bottom, left y right.
+		2. Color inicial.
+		3. Color final.	
+	background: -moz-linear-gradient(top, #FFFFFF, #006699);
+	background: -webkit-linear-gradient(top, #FFFFFF, #006699);
+	background: linear-gradient(top, #FFFFFF, #006699);
+	*/
+
+	/*Punto inicial con grados
+	background: -moz-linear-gradient(30deg, #FFFFFF, #006699);
+	background: -webkit-linear-gradient(30deg, #FFFFFF, #006699);
+	background: linear-gradient(30deg, #FFFFFF, #006699);
+	*/
+
+	/*Puntos de terminación por color
+	background: -moz-linear-gradient(top, #FFFFFF 50%, #006699 90%);
+	background: -webkit-linear-gradient(top, #FFFFFF 50%, #006699 90%);
+	background: linear-gradient(top, #FFFFFF 50%, #006699 90%);
+	*/
+
+	/*===============================
+		GRADIENTE RADIAL
+	=================================*/
+	/*	- Se usa igual que el gradiente lineal
+		1. Posición de inicio: px, %, o usando center, top, bottom, left y right.
+		2. Forma: circle y ellipse
+		3. Color inicial.
+		4. Color final.	
+	background: -moz-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+	background: -webkit-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+	background: radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+	*/
+
+	/*===============================
+		OUTLINE
+	=================================*/
+	/*	- Para crear un segundo borde
+		- outline: Usa los mismos parámetros que border
+		- outline-offset: podemos expresar en px
+						  qué tanto estará separado, 
+						  del elemento, ese segundo borde.
+	outline: 2px dashed #000099;
+	outline-offset: 15px;
+	*/
+
+	/*===============================
+		BORDER-IMAGE
+	=================================*/
+	/*	- Para crear bordes con imágenes
+		1. Nombre del archivo de la imagen.
+		2. Tamaño de las piezas que queremos obtener del patrón.
+		3. Distribución:
+			- repeat: repetirá las piezas todas las veces que 
+						sea necesario para cubrir el lado del elemento.
+						El tamaño de las piezas es preservado y
+						se cortará la imagen cuando no quepa.
+			- round: considerará qué tan largo es el lado a ser cubierto 
+						y ajustará el tamaño de las piezas para asegurarse 
+						que cubren todo el lado y ninguna pieza es cortada.
+			- stretch: Estira solo una pieza para cubrir el lado completo.
+		- Esta nueva regla puede usarse con:
+			-border: Mismo tamaño para los 4 lados del elemento
+			-border-with: para especificar diferentes tamaños por cada lado
+		Nota: Lo mismo ocurre con el tamaño de cada pieza, hasta cuatro
+				valores pueden ser declarados para obtener diferentes 
+				imágenes de diferentes tamaños desde el patrón.;
+	 
+	border: 29px;
+	-moz-border-image: url("diamonds.png") 29 round;
+	-webkit-border-image: url("diamonds.png") 29 round;
+	border-image: url("diamonds.png") 29 round;
+	*/
+
+	/*===============================
+		TRANSFORM: SCALE()
+		- Escalar un elemento.
+		- scaleX() y scaleY() 
+			utilizan un sólo parámetro que 
+			aplica a la dimensión especificada.
+	=================================*/
+	/*	- Recibe 2 parámetros:
+		1. Valor X: Escala horizontal.
+		2. Valor Y: Escala vertical.
+		NOTA: Si sólo un valor es provisto se aplica 
+				el mismo valor a los 2 parámetros.
+		- Pueden usarse números enteros y decimales.
+		- Valores entre 0 y 1: reducen el elemento
+		- Valores 1: mantiene las proporciones originales.
+		- Valores > 1: Aumentan las dimensiones del elemento.
+	-moz-transform: scale(2);
+	-webkit-transform: scale(2);
+	transform: scale(2);
+	*/ 
+
+	/*	VALORES NEGATIVOS
+		Pueden usarse para generar un efecto espejo.
+		En este ejemplo se invierte el elemento verticalmente.
+	-moz-transform: scale(1, -1);
+	-webkit-transform: scale(1, -1);
+	transform: scale(1, -1);
+	*/ 
+
+	/*===============================
+		TRANSFORM: ROTATE()
+		- Rotar un elemento.
+	=================================*/
+	/*	- Utiliza un sólo valor que especifica
+			los grados a rotar en unidades deg.
+		- Cuando se utilizan valores negativos
+			sólo cambia la dirección de rotación
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);	*/ 
+	
+	/*===============================
+		TRANSFORM: SKEW()
+		- Inclinar un elemento.
+		- skewX() y skewY() 
+			utilizan un sólo parámetro que 
+			aplica a la dimensión especificada.
+	=================================*/
+	/*	- Cambia la simetría del elemento en grados
+			y en ambas dimensiones.
+		- Utiliza 2 parámetros:
+		1. Valor X: Inclinación horizontal.
+		2. Valor Y: Inclinación vertical.
+		NOTA: Si sólo un valor es provisto se aplica 
+				el valor a la dimensión HORIZONTAL.
+	-moz-transform: skew(20deg);
+	-webkit-transform: skew(20deg);
+	transform: skew(20deg);
+	*/ 
+
+	/*===============================
+		TRANSFORM: TRANSLATE()
+		- Traslada un elemento.
+		- translateX() y translateY.() 
+			utilizan un sólo parámetro que 
+			aplica a la dimensión especificada.
+	=================================*/
+	/*	- Mueve el elemento en px.
+		- Utiliza 2 parámetros:
+		1. Valor X: tralación horizontal.
+		2. Valor Y: tralación vertical.
+		NOTA: Si sólo un valor es provisto se aplica 
+				el valor a la dimensión HORIZONTAL.
+	-moz-transform: translate(100px);
+	-webkit-transform: translate(100px);
+	transform: translate(100px);
+	*/
+
+	/*===============================
+		TRANSFORM: ALL
+	=================================*/
+	/*	- Se pueden usar varias funciones juntas con 
+			transform sólo separandolas con espacio.
+		- Se debe tomar en cuenta que el orden es
+			importante en este caso porque algunas 
+			funciones mueven el punto original y el 
+			centro del elemento.	
+	-moz-transform: translateY(100px) rotate(45deg) scaleX(0.3);
+	-webkit-transform: translateY(100px) rotate(45deg) scaleX(0.3);
+	transform: translateY(100px) rotate(45deg) scaleX(0.3);
+	*/
+
+	/*===============================
+		TRANSITION
+	=================================*/
+	/*	- Puede tomar hasta 4 parámetros
+		1. Propiedad a considerar para hacer la transición.
+			- all: Para producir una transición para todas las propiedades 
+			- Se pueden listar varias propiedades
+				separándolas con coma.
+		2. Tiempo que tomará el elemento para ir de la posición incial a la final.
+		3. Cómo se realizará el proceso de transición basado en
+			curva Bézier.
+			- ease
+			- linear
+			- ease-in
+			- ease-out
+			- ease-in-out
+		4. Cuánto tiempo tardará la transición en comenzar.
+	*/
+	-moz-transition: -moz-transform 1s ease-in-out 0.5s;
+	-webkit-transition: -webkit-transform 1s ease-in-out 0.5s;
+	transition: transform 1s ease-in-out 0.5s;
+	
+}
+#principal:hover{
+	/*===============================
+		TRANSFORMACIONES DINÁMICAS
+	=================================*/
+	/*	- Utilizando clases como hover
+			podemos realizar transformaciones
+			que se aplicarán sólo cuando
+			el usuario ponga el ratón sobre
+			el elemento.*/	
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	transform: rotate(5deg);
+}
+
+
+
+
+#titulo{
+	/*===============================
+		@font-face
+		- Fuente personalizadas
+	=================================*/
+	/*font: bold 36px verdana, sans-serif;*/
+	font: bold 36px MiNuevaFuente, verdana, sans-serif;
+
+	/*===============================
+		TEXT-SHADOW
+		- Sombras a textos, 
+			generalmente títulos.
+	=================================*/
+	/*Los valores usados funcionan igual que en BOX-SHADOW
+	text-shadow: rgb(0, 0, 150) 3px 3px 5px;*/
+
+	/*===============================
+		RGBA()
+	=================================*/
+	/*	- Nos permite agregar un valor de opacidad/transparencia
+		1. Red: Valor de 0 a 250
+		2. Green: Valor de 0 a 250
+		3. Blue: Valor de 0 a 250
+		4. Opacidad: Valor de 0 a 1. 
+					0 = Totalmente transparente. 
+					1 = Totalmente opaco.	*/
+	text-shadow: rgba(0, 0, 0, .5) 3px 3px 5px;
+
+	/*===============================
+		HSLA()
+	=================================*/
+	/*	- Función para generar colores
+		1. Tono: Color extraido de una rueda imaginaria
+				expresado en valores de 0 a 360 grados.
+				- Cerca de 0 y 360: Rojos.
+				- Cerca 120: Verdes.
+				- Cerca 240: Azules.
+		2. Saturacion: Representado en % desde 0 a 100.
+						- 0%: escala de grises
+						- 100%: Todo color o completamente saturado
+		3. Luminosidad: Representado en % desde 0 a 100.
+						- 0%: completamente oscuro
+						- 50%: luminosidad normal o promedio
+						- 100%: completamente iluminado
+		4. Opacidad: Valor de 0 a 1. 
+					0 = Totalmente transparente. 
+					1 = Totalmente opaco.	*/
+	color: hsla(240, 100%, 50%, 0.5);
+}
+
+/*Defininción de una fuente*/
+@font-face{ 
+	font-family: 'MiNuevaFuente';
+	src: url('Graciela-Regular.otf');
+}
