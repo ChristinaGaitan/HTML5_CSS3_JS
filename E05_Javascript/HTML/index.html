@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Ejemplo de HTML5" />
+		<meta name="keywords" content="HTML5, CSS3, Javascript" />
+		<title>Este es el título del documento</title>
+		<script type="text/javascript" src="..\JS\MiCodigo.js"></script>
+		<!--
+		<script type="text/javascript">
+		 Javascript en embebido
+			function hacerClick()
+			{
+				//Regresa un array con los elementos 'p' de la página
+				//Especifica que quiere acceder al elemento [0]
+				//Se le pasa la referencia a la función "mosrtarAlerta" al evento "onclick"
+				document.getElementsByTagName('p')[0].onclick=mosrtarAlerta;
+			}
+
+			function mosrtarAlerta()
+			{
+				alert('hizo click!');
+			}
+			window.onload = hacerClick;
+		</script>
+		--> 
+	</head>
+	<body>
+		<div id="principal">
+			<!-- Javascript en línea 
+			<p onclick="alert('hizo click!')">Hacer click</p>
+			<p onMouseOver="alert('pasó el mouse!')">Hacer click</p> -->
+
+			<p>Hacer click</p>
+			<p>No puede hacer click</p>
+		</div>
+	</body>
+</html>
